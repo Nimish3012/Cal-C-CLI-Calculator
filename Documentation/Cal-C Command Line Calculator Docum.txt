@@ -1,0 +1,59 @@
+Cal-C: Command Line Calculator Documentation
+Introduction
+Cal-C is a simple command-line calculator developed in C++. It allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) on mathematical expressions. The calculator processes expressions in any order and follows the DMAS priority (Division, Multiplication, Addition, Subtraction) for evaluation.
+
+Features
+Expression Processing: Accepts user input and processes it into a valid mathematical expression, ignoring whitespaces.
+Dynamic Evaluation: Performs arithmetic operations on the expression, considering the DMAS priority, until the final result is obtained.
+User-Friendly: Provides a user interface with prompts for input and an option to continue or exit.
+Error Handling: Checks for the presence of operators in the expression and handles invalid syntax gracefully.
+Code Structure
+Global Variables
+Exp: Holds the current mathematical expression.
+result: Stores the result of arithmetic operations.
+length1 and length2: Unused global variables.
+Functions
+input
+
+Purpose: Takes user input and processes it into a valid mathematical expression.
+Input: None
+Output: Returns the processed expression.
+HasOP
+
+Purpose: Checks if the expression contains any basic arithmetic operators.
+Input: Reference to the expression (Exp)
+Output: Returns true if operators are present, otherwise false.
+isDecimal
+
+Purpose: Checks if a character is a digit or a decimal point.
+Input: Character (c)
+Output: Returns true if the character is a digit or a decimal point, otherwise false.
+update
+
+Purpose: Updates the expression by replacing a substring with a new result.
+Input: Starting index, length, and the new result.
+Output: None.
+performOP
+
+Purpose: Performs a specified arithmetic operation on the expression.
+Input: Expression (Exp), Operator (OP)
+Output: None.
+evaluation
+
+Purpose: Iteratively performs arithmetic operations on the expression following DMAS priority.
+Input: Reference to the expression (Exp)
+Output: None.
+main
+
+Purpose: The main program execution.
+Workflow:
+Welcomes the user and explains the calculator's functionality.
+Enters a loop to allow multiple calculations.
+Calls input to get the expression and checks for the presence of operators.
+If operators are present, calls evaluation to perform calculations and displays the result.
+Handles user choice to continue or exit.
+Usage
+Run the program.
+Enter a mathematical expression when prompted.
+The calculator processes the expression and performs calculations.
+The result is displayed, and the user is prompted to continue or exit.
